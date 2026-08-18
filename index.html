@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bazzigar_Satka_Matka - Join Telegram</title>
+  <title>Bazzigar Satka Matka - Official Telegram</title>
   <style>
     * {
       margin: 0;
@@ -13,29 +13,35 @@
     }
 
     body {
-      background-color: #0b0e14;
+      background-color: #0d1117;
+      background-image: radial-gradient(circle at 50% 0%, rgba(34, 158, 217, 0.15), transparent 70%);
       color: #ffffff;
       display: flex;
-      flex-direction: column;
+      justify-content: center;
       align-items: center;
       min-height: 100vh;
-      overflow-x: hidden;
+      padding: 20px 15px;
     }
 
-    /* Main Container */
-    main {
+    /* Card Wrapper */
+    .card-wrapper {
       width: 100%;
-      max-width: 480px;
-      padding: 20px 16px;
+      max-width: 440px;
+      background: rgba(22, 27, 34, 0.85);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 20px;
+      padding: 32px 24px;
       text-align: center;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.6);
     }
 
-    /* Profile Box */
+    /* Profile Container */
     .profile-box {
       position: relative;
-      width: 120px;
-      height: 120px;
-      margin: 0 auto 15px auto;
+      width: 110px;
+      height: 110px;
+      margin: 0 auto 18px auto;
     }
 
     .profile-img {
@@ -43,8 +49,8 @@
       height: 100%;
       border-radius: 50%;
       object-fit: cover;
-      border: 3px solid #222938;
-      background-color: #1f293d;
+      border: 3px solid #229ed9;
+      box-shadow: 0 0 20px rgba(34, 158, 217, 0.3);
     }
 
     .badge-check {
@@ -59,89 +65,158 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 14px;
+      font-size: 13px;
       font-weight: bold;
-      border: 2px solid #0b0e14;
+      border: 2px solid #0d1117;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.4);
     }
 
-    /* Text Headers */
+    /* Titles & Subscribers Badge */
     h1 {
-      font-size: 26px;
+      font-size: 24px;
       font-weight: 800;
-      margin-bottom: 8px;
-      line-height: 1.3;
-      color: #229ed9;
-    }
-
-    .subscriber-tag {
-      color: #94a3b8;
-      font-size: 14px;
-      margin-bottom: 20px;
-    }
-
-    /* Features Section */
-    .features-card {
-      background: #1e293b;
-      padding: 20px;
-      border-radius: 12px;
-      border: 1px solid #334155;
-      margin-bottom: 30px;
-      text-align: left;
-      line-height: 1.6;
-    }
-
-    .features-card p {
-      font-size: 16px;
       color: #ffffff;
-      margin-bottom: 12px;
+      letter-spacing: -0.5px;
+      margin-bottom: 6px;
     }
-    .features-card p:last-child {
+
+    .sub-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(34, 158, 217, 0.1);
+      border: 1px solid rgba(34, 158, 217, 0.25);
+      color: #38bdf8;
+      padding: 4px 12px;
+      border-radius: 20px;
+      font-size: 13px;
+      font-weight: 600;
+      margin-bottom: 24px;
+    }
+
+    .dot {
+      width: 7px;
+      height: 7px;
+      background-color: #38bdf8;
+      border-radius: 50%;
+      box-shadow: 0 0 8px #38bdf8;
+    }
+
+    /* Content Box */
+    .features-list {
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      border-radius: 14px;
+      padding: 18px 16px;
+      margin-bottom: 24px;
+      text-align: left;
+      box-shadow: inset 0 1px 0 rgba(255,255,255,0.05);
+    }
+
+    .feature-item {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 12px;
+      font-size: 15px;
+      color: #f1f5f9;
+      font-weight: 500;
+    }
+
+    .feature-item:last-child {
       margin-bottom: 0;
     }
 
-    /* Join Button */
+    .icon-wrap {
+      background: rgba(255, 255, 255, 0.05);
+      padding: 6px;
+      border-radius: 8px;
+      font-size: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* Premium CTA Button */
     .btn-join {
-      display: block;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
       width: 100%;
-      background: linear-gradient(135deg, #229ed9, #0088cc);
+      background: linear-gradient(135deg, #229ed9 0%, #0077b5 100%);
       color: #ffffff;
       text-decoration: none;
       padding: 16px 20px;
       border-radius: 12px;
       font-weight: 700;
-      font-size: 18px;
-      box-shadow: 0 8px 20px rgba(34, 158, 217, 0.4);
-      transition: transform 0.2s, box-shadow 0.2s;
+      font-size: 16px;
+      letter-spacing: 0.5px;
+      box-shadow: 0 8px 24px rgba(34, 158, 217, 0.35);
+      transition: all 0.3s ease;
+    }
+
+    .btn-join:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 12px 28px rgba(34, 158, 217, 0.5);
+      background: linear-gradient(135deg, #27a7e3 0%, #0084c7 100%);
     }
 
     .btn-join:active {
-      transform: scale(0.98);
+      transform: translateY(0);
+    }
+
+    /* Footer Text */
+    .footer-note {
+      margin-top: 18px;
+      font-size: 12px;
+      color: #64748b;
     }
   </style>
 </head>
 <body>
 
-  <main>
+  <div class="card-wrapper">
     <!-- Profile Box -->
     <div class="profile-box">
-      <!-- 'gautamjha.jpg' link ke liye local me image save karein -->
-      <img src="gautamjha.jpg" alt="Logo" class="profile-img" width="150" height="150" loading="eager">
+      <img src="gautamjha.jpg" alt="Logo" class="profile-img" width="110" height="110" loading="eager" onerror="this.src='https://via.placeholder.com/150';">
       <div class="badge-check">✓</div>
     </div>
 
+    <!-- Title & Stats -->
     <h1>Bazzigar_Satka_Matka</h1>
-    <p class="subscriber-tag">172 subscribers</p>
+    <div class="sub-badge">
+      <span class="dot"></span>
+      172 subscribers
+    </div>
 
-    <!-- Features Section -->
-    <section class="features-card">
-      <p>फरीदाबाद से दिसावर 🔥</p>
-      <p>रोजाना 4 में से 3 लोकेशन पास 🔥</p>
-      <p>महीने में 26/27 दिन पासिंग का वादा 💯 ...</p>
-    </section>
+    <!-- Features List -->
+    <div class="features-list">
+      <div class="feature-item">
+        <span class="icon-wrap">🔥</span>
+        <span>फरीदाबाद से दिसावर</span>
+      </div>
+      <div class="feature-item">
+        <span class="icon-wrap">🎯</span>
+        <span>रोजाना 4 में से 3 लोकेशन पास</span>
+      </div>
+      <div class="feature-item">
+        <span class="icon-wrap">💯</span>
+        <span>महीने में 26/27 दिन पासिंग का वादा</span>
+      </div>
+    </div>
 
-    <!-- Join Button with Link -->
-    <a href="https://t.me/+spL1z2ZEKQE4MTM1" class="btn-join" target="_blank">✈️ JOIN CHANNEL</a>
-  </main>
+    <!-- Telegram CTA Button -->
+    <a href="https://t.me/+spL1z2ZEKQE4MTM1" class="btn-join" target="_blank">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 0 0-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.74-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .38z"/>
+      </svg>
+      JOIN TELEGRAM CHANNEL
+    </a>
+
+    <!-- Footer Note -->
+    <p class="footer-note">🔒 100% Free & Secure Channel Access</p>
+  </div>
 
 </body>
 </html>
