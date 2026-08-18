@@ -36,7 +36,7 @@
       box-shadow: 0 20px 40px rgba(0,0,0,0.6);
     }
 
-    /* Profile Container */
+    /* Profile Box */
     .profile-box {
       position: relative;
       width: 110px;
@@ -91,7 +91,7 @@
       border-radius: 20px;
       font-size: 13px;
       font-weight: 600;
-      margin-bottom: 24px;
+      margin-bottom: 16px;
     }
 
     .dot {
@@ -100,6 +100,27 @@
       background-color: #38bdf8;
       border-radius: 50%;
       box-shadow: 0 0 8px #38bdf8;
+    }
+
+    /* Live Joined Counter Badge */
+    .join-counter-badge {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      background: rgba(245, 158, 11, 0.12);
+      border: 1px solid rgba(245, 158, 11, 0.3);
+      padding: 8px 18px;
+      border-radius: 30px;
+      font-size: 14px;
+      color: #f1f5f9;
+      margin-bottom: 24px;
+      box-shadow: 0 4px 12px rgba(245, 158, 11, 0.1);
+    }
+
+    .join-counter-badge b {
+      color: #fbbf24;
+      font-weight: 700;
     }
 
     /* Content Box */
@@ -154,6 +175,7 @@
       letter-spacing: 0.5px;
       box-shadow: 0 8px 24px rgba(34, 158, 217, 0.35);
       transition: all 0.3s ease;
+      margin-bottom: 24px;
     }
 
     .btn-join:hover {
@@ -164,6 +186,31 @@
 
     .btn-join:active {
       transform: translateY(0);
+    }
+
+    /* Disclaimer Box */
+    .disclaimer-box {
+      background: rgba(239, 68, 68, 0.06);
+      border: 1px solid rgba(239, 68, 68, 0.2);
+      border-radius: 12px;
+      padding: 14px 16px;
+      text-align: left;
+    }
+
+    .disclaimer-title {
+      font-size: 13px;
+      font-weight: 700;
+      color: #f87171;
+      margin-bottom: 6px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .disclaimer-text {
+      font-size: 11px;
+      color: #94a3b8;
+      line-height: 1.5;
     }
 
     /* Footer Text */
@@ -190,6 +237,13 @@
       172 subscribers
     </div>
 
+    <!-- Joined Counter Badge -->
+    <div>
+      <div class="join-counter-badge">
+        🔥 <b>18,432</b> logon ne abhi join kiya
+      </div>
+    </div>
+
     <!-- Features List -->
     <div class="features-list">
       <div class="feature-item">
@@ -213,6 +267,14 @@
       </svg>
       JOIN TELEGRAM CHANNEL
     </a>
+
+    <!-- Disclaimer Box -->
+    <div class="disclaimer-box">
+      <div class="disclaimer-title">⚠ Disclaimer</div>
+      <p class="disclaimer-text">
+        All content shared on this channel is purely for educational and informational purposes. Trading in stocks and derivatives involves risk. Please consult a SEBI-registered financial advisor before making investment decisions.
+      </p>
+    </div>
 
     <!-- Footer Note -->
     <p class="footer-note">🔒 100% Free & Secure Channel Access</p>
