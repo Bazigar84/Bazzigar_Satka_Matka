@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Join Official Telegram Channel</title>
+  <title>Trade With Gautam Jhaa - Official Telegram Channel</title>
   <style>
     * {
       margin: 0;
@@ -84,8 +84,8 @@
     /* Profile Box */
     .profile-box {
       position: relative;
-      width: 110px;
-      height: 110px;
+      width: 120px;
+      height: 120px;
       margin: 0 auto 15px auto;
     }
 
@@ -104,13 +104,14 @@
       right: 2px;
       background: #229ed9;
       color: white;
-      width: 24px;
-      height: 24px;
+      width: 26px;
+      height: 26px;
       border-radius: 50%;
       display: flex;
       align-items: center;
       justify-content: center;
       font-size: 14px;
+      font-weight: bold;
       border: 2px solid #0b0e14;
     }
 
@@ -279,11 +280,19 @@
       line-height: 1.5;
     }
 
-    /* Floating Button & Footer */
+    /* Footer */
     footer {
       margin-top: 30px;
       font-size: 12px;
       color: #64748b;
+    }
+
+    footer a {
+      color: #229ed9;
+      text-decoration: none;
+      font-weight: 600;
+      display: inline-block;
+      margin-bottom: 8px;
     }
 
     .floating-btn {
@@ -307,8 +316,8 @@
 </head>
 <body>
 
-  <!-- Live Stock Ticker Bar -->
-  <div class="ticker-wrap">
+  <!-- Live Stock Market Ticker -->
+  <div class="ticker-wrap" role="marquee" aria-label="Live stock market ticker">
     <div class="ticker">
       <div class="ticker-item">NIFTY <span>▲ 0.82%</span></div>
       <div class="ticker-item">BANK NIFTY <span>▲ 1.15%</span></div>
@@ -319,16 +328,16 @@
   </div>
 
   <main>
-    <!-- Live Status -->
+    <!-- Live Channel Status Badge -->
     <div class="status-badge">
       <div class="dot"></div>
       CHANNEL LIVE & ACTIVE
     </div>
 
-    <!-- Profile Image -->
+    <!-- Profile Box -->
     <div class="profile-box">
-      <img src="https://via.placeholder.com/150" alt="Trader Profile" class="profile-img">
-      <div class="badge-check">✓</div>
+      <img src="gautamjha.jpg" alt="Gautam Jhaa - Stock Market Analyst" class="profile-img" width="150" height="150" loading="eager">
+      <div class="badge-check" title="Verified" aria-label="Verified">✓</div>
     </div>
 
     <p class="sub-title">Official Telegram Channel</p>
@@ -342,7 +351,7 @@
       <div class="pill">⚡ Live Alerts</div>
     </div>
 
-    <!-- Main Telegram CTA Button -->
+    <!-- Main CTA Button with Link -->
     <a href="https://t.me/+spL1z2ZEKQE4MTM1" class="btn-join" target="_blank">
       <div class="btn-main-text">✈️ JOIN TELEGRAM CHANNEL</div>
       <div class="btn-sub-text">Tap Karo & Abhi Join Karo</div>
@@ -355,12 +364,16 @@
     </div>
 
     <div class="user-count">
-      🔥 <b>18,000+</b> logon ne abhi join kiya
+      🔥 <span>18000</span> logon ne abhi join kiya
     </div>
 
     <!-- Features Section -->
     <section class="features-section">
       <h2 class="section-title">WHAT YOU <span>GET</span></h2>
+      <p style="text-align: center; color: #94a3b8; font-size: 13px; margin-bottom: 20px;">
+        Everything you need to trade smarter, in one place.
+      </p>
+      
       <div class="grid">
         <div class="card">
           <div class="card-icon">📈</div>
@@ -375,17 +388,17 @@
         <div class="card">
           <div class="card-icon">📚</div>
           <h3>Free Education</h3>
-          <p>Learn trading from basics to advanced levels.</p>
+          <p>Learn trading from basics to advanced.</p>
         </div>
         <div class="card">
           <div class="card-icon">⚡</div>
           <h3>Market Updates</h3>
-          <p>Instant alerts when high-probability opportunities arise.</p>
+          <p>Instant alerts when opportunities arise.</p>
         </div>
       </div>
     </section>
 
-    <!-- Disclaimer -->
+    <!-- Disclaimer Section -->
     <section class="disclaimer">
       <h4>⚠ Disclaimer</h4>
       <p>
@@ -394,13 +407,14 @@
     </section>
 
     <footer>
-      <p>© 2026 Official Channel. All Rights Reserved.</p>
-      <p>Made for Indian Traders</p>
+      <a href="https://t.me/+spL1z2ZEKQE4MTM1" target="_blank">✈️ Join Telegram Channel Now</a>
+      <p>© 2026 Gautam Jhaa</p>
+      <p>Made with <span style="color: red;">❤️</span> for Indian Traders</p>
     </footer>
   </main>
 
-  <!-- Floating Telegram Button -->
-  <a href="https://t.me/+spL1z2ZEKQE4MTM1" class="floating-btn" target="_blank">✈️</a>
+  <!-- Floating Join Button -->
+  <a href="https://t.me/+spL1z2ZEKQE4MTM1" class="floating-btn" aria-label="Join Telegram Channel" target="_blank">✈️</a>
 
 </body>
 </html>
